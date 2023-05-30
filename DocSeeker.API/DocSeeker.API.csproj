@@ -19,7 +19,6 @@
 
     <ItemGroup>
       <Folder Include="Prescriptions\Domain\Repositories\" />
-      <Folder Include="Prescriptions\Domain\Services\" />
       <Folder Include="Prescriptions\Interfaces\Internal\" />
       <Folder Include="Prescriptions\Interfaces\Rest\" />
       <Folder Include="Prescriptions\Mapping\" />
