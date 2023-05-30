@@ -16,6 +16,7 @@ public interface IPrescriptionService
      * We only know we will get an enumerable thing.
      */
     Task<IEnumerable<Prescription>> ListAsync();
+    Task<IEnumerable<Prescription>> ListByDoctorIdAsync(int doctorId);
     Task<PrescriptionResponse> SaveAsync(Prescription prescription);
     Task<PrescriptionResponse> UpdateAsync(int id, Prescription prescription);
     Task<PrescriptionResponse> DeleteAsync(int id);
