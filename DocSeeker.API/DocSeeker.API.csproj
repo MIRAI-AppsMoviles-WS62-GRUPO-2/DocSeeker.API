@@ -18,6 +18,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Appointment\Domain\Models\" />
+      <Folder Include="Appointment\Domain\Repositories\" />
+      <Folder Include="Appointment\Domain\Services\" />
+      <Folder Include="Appointment\Interface\Internal\" />
+      <Folder Include="Appointment\Interface\Rest\" />
+      <Folder Include="Appointment\Mapping\" />
+      <Folder Include="Appointment\Persistance\Repositories\" />
+      <Folder Include="Appointment\Resources\" />
+      <Folder Include="Appointment\Services\" />
       <Folder Include="Prescriptions\Domain\Repositories\" />
       <Folder Include="Prescriptions\Domain\Services\" />
       <Folder Include="Prescriptions\Interfaces\Internal\" />
