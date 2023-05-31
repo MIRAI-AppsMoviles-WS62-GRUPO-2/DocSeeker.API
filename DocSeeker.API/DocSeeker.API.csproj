@@ -20,10 +20,7 @@
     <ItemGroup>
       <Folder Include="Appointments\Interfaces\Internal\" />
       <Folder Include="Appointments\Interfaces\Rest\" />
-      <Folder Include="Appointments\Interface\Internal\" />
-      <Folder Include="Appointments\Interface\Rest\" />
       <Folder Include="Appointments\Mapping\" />
-      <Folder Include="Appointments\Persistance\Repositories\" />
       <Folder Include="Appointments\Persistence\Repositories\" />
       <Folder Include="Appointments\Resources\" />
       <Folder Include="Appointments\Services\" />
