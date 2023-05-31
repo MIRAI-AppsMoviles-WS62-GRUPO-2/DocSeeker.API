@@ -20,9 +20,7 @@
     <ItemGroup>
       <Folder Include="Prescriptions\Interfaces\Internal\" />
       <Folder Include="Prescriptions\Interfaces\Rest\" />
-      <Folder Include="Prescriptions\Mapping\" />
       <Folder Include="Prescriptions\Persistence\Repositories\" />
-      <Folder Include="Prescriptions\Resources\" />
       <Folder Include="Prescriptions\Services\" />
       <Folder Include="Shared\Extensions\" />
       <Folder Include="Shared\Persistence\Contexts\" />
