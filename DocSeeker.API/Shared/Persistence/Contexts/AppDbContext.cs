@@ -1,6 +1,8 @@
-﻿using DocSeeker.API.Prescriptions.Domain.Models;
+﻿using DocSeeker.API.Appointments.Domain.Models;
+using DocSeeker.API.Prescriptions.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Doctor = DocSeeker.API.Prescriptions.Domain.Models.Doctor;
 
 namespace DocSeeker.API.Shared.Persistence.Contexts;
 
@@ -17,7 +19,9 @@ public class AppDbContext: DbContext
     public DbSet<Prescription> Prescriptions { get; set; }
     public DbSet<Medicine> Medicines { get; set; }
     public DbSet<Doctor> Doctors { get; set; }
-    
+    public DbSet<Patient> Patients { get; set; }
+    public DbSet<Appointment> Appointments { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -56,6 +60,17 @@ public class AppDbContext: DbContext
         builder.Entity<Doctor>().Property(d => d.Description).HasMaxLength(300);
         builder.Entity<Doctor>().Property(d => d.Phone).IsRequired().HasMaxLength(9);
         builder.Entity<Doctor>().Property(d => d.Email).IsRequired().HasMaxLength(40);
+        
+        // Patients Configuration
+        
+        builder.Entity<Patient>().ToTable("Patients");
+        builder.Entity<Patient>().HasKey(p => p.Id);
+        builder.Entity<Patient>().Property(p => p.Id).IsRequired();
+        builder.Entity<Patient>().Property(p => p.Name).IsRequired();
+        builder.Entity<Patient>().Property(p => p.Address).IsRequired();
+        builder.Entity<Patient>().Property(p => p.PhoneNumber).IsRequired().HasMaxLength(9);
+        builder.Entity<Patient>().Property(p => p.Email).IsRequired().HasMaxLength(40);
+        
 
         // Relationships
 
@@ -68,6 +83,11 @@ public class AppDbContext: DbContext
             .HasMany(p => p.Medicines)
             .WithOne(m => m.Prescription)
             .HasForeignKey(m => m.PrescriptionId);
+        
+        builder.Entity<Patient>()
+            .HasMany(a => a.Appointments)
+            .WithOne(p => p.Patient)
+            .HasForeignKey(p => p.PatientId);
         
         // Apply Snake Case Naming Convention
 
