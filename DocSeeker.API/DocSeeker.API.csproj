@@ -18,16 +18,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Appointment\Domain\Repositories\" />
-      <Folder Include="Appointment\Interfaces\Internal\" />
-      <Folder Include="Appointment\Interfaces\Rest\" />
-      <Folder Include="Appointment\Interface\Internal\" />
-      <Folder Include="Appointment\Interface\Rest\" />
-      <Folder Include="Appointment\Mapping\" />
-      <Folder Include="Appointment\Persistance\Repositories\" />
-      <Folder Include="Appointment\Persistence\Repositories\" />
-      <Folder Include="Appointment\Resources\" />
-      <Folder Include="Appointment\Services\" />
+      <Folder Include="Appointments\Domain\Repositories\" />
+      <Folder Include="Appointments\Interfaces\Internal\" />
+      <Folder Include="Appointments\Interfaces\Rest\" />
+      <Folder Include="Appointments\Interface\Internal\" />
+      <Folder Include="Appointments\Interface\Rest\" />
+      <Folder Include="Appointments\Mapping\" />
+      <Folder Include="Appointments\Persistance\Repositories\" />
+      <Folder Include="Appointments\Persistence\Repositories\" />
+      <Folder Include="Appointments\Resources\" />
+      <Folder Include="Appointments\Services\" />
     </ItemGroup>
 
 </Project>
