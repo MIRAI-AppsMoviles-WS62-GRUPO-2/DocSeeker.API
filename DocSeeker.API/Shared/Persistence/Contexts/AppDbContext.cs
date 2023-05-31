@@ -71,6 +71,12 @@ public class AppDbContext: DbContext
         builder.Entity<Patient>().Property(p => p.PhoneNumber).IsRequired().HasMaxLength(9);
         builder.Entity<Patient>().Property(p => p.Email).IsRequired().HasMaxLength(40);
         
+        // Appointments Configuration
+        
+        builder.Entity<Appointment>().ToTable("Appointments");
+        builder.Entity<Appointment>().HasKey(a => a.Id);
+        builder.Entity<Appointment>().Property(a => a.DateTime).IsRequired();
+
 
         // Relationships
 
@@ -89,6 +95,11 @@ public class AppDbContext: DbContext
             .WithOne(p => p.Patient)
             .HasForeignKey(p => p.PatientId);
         
+        builder.Entity<Appointment>()
+            .HasOne(a => a.Doctor)
+            .WithMany(d => d.Appointments)
+            .HasForeignKey(a => a.DoctorId);
+
         // Apply Snake Case Naming Convention
 
         builder.UseSnakeCaseNamingConvention();

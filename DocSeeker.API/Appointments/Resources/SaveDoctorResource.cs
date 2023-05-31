@@ -8,11 +8,16 @@ public class SaveDoctorResource
     public string Name { get; set; }
     
     [Required]
-    public string Specialization { get; set; }
+    public string Specialty { get; set; }
+    
+    [MaxLength(300)]
+    public int Description { get; set; }
     
     [Required]
-    public string PhoneNumber { get; set; }
+    [MaxLength(9)]
+    public string Phone { get; set; }
     
     [Required]
+    [MaxLength(40)]
     public string Email { get; set; }
 }

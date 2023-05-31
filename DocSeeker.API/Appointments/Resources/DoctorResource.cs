@@ -6,9 +6,11 @@ public class DoctorResource
     
     public string Name { get; set; }
     
-    public string Specialization { get; set; }
+    public string Specialty { get; set; }
     
-    public string PhoneNumber { get; set; }
+    public int Description { get; set; }
+    
+    public string Phone { get; set; }
     
     public string Email { get; set; }
 }
