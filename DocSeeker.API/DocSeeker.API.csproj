@@ -22,7 +22,6 @@
       <Folder Include="Prescriptions\Interfaces\Rest\" />
       <Folder Include="Prescriptions\Persistence\Repositories\" />
       <Folder Include="Prescriptions\Services\" />
-      <Folder Include="Shared\Persistence\Repositories\" />
     </ItemGroup>
 
 </Project>
