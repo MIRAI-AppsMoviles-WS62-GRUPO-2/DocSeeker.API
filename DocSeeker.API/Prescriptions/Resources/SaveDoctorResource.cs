@@ -12,7 +12,7 @@ public class SaveDoctorResource
     [Required]
     public string Specialty { get; set; }
     
-    [MaxLength(250)]
+    [MaxLength(300)]
     public int Description { get; set; }
     
     [Required]
