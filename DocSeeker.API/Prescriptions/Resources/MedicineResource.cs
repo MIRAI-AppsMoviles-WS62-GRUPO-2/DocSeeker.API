@@ -2,6 +2,7 @@
 
 // We don't put RelationShips because we can't expose entities to users
 // that's why we use PrescriptionResource beside Prescription
+// With this file we are using DTO(Data Transfer Object) pattern. This is a DTO.
 public class MedicineResource
 {
     public int Id { get; set; }

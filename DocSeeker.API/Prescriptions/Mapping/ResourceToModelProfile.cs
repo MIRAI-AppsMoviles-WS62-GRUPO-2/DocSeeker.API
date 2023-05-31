@@ -4,6 +4,7 @@ using DocSeeker.API.Prescriptions.Resources;
 
 namespace DocSeeker.API.Prescriptions.Mapping;
 
+// In this file we are mapping DTOs to Models
 public class ResourceToModelProfile: Profile
 {
     protected ResourceToModelProfile()
