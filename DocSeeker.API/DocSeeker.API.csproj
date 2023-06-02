@@ -18,7 +18,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Prescriptions\Interfaces\Internal\" />
       <Folder Include="Prescriptions\Interfaces\Rest\" />
       <Folder Include="Profile\Interfaces\Internal\" />
       <Folder Include="Profile\Interfaces\Rest\" />
