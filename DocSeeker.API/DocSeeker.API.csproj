@@ -20,7 +20,6 @@
     <ItemGroup>
       <Folder Include="Prescriptions\Interfaces\Internal\" />
       <Folder Include="Prescriptions\Interfaces\Rest\" />
-      <Folder Include="Prescriptions\Persistence\Repositories\" />
       <Folder Include="Prescriptions\Services\" />
     </ItemGroup>
 
