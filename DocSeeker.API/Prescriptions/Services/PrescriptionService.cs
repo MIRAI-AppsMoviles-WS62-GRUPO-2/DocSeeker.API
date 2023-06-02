@@ -29,6 +29,8 @@ public class PrescriptionService: IPrescriptionService
 
     public async Task<PrescriptionResponse> SaveAsync(Prescription prescription)
     {
+        // I'm not sure if call IDoctorRepository to validate that doctorId is right.
+        
         try
         {
             await _prescriptionRepository.AddAsync(prescription); // connection
@@ -51,7 +53,7 @@ public class PrescriptionService: IPrescriptionService
 
         existingPrescription.State = prescription.State;
         existingPrescription.Recommendation = prescription.Recommendation;
-        existingPrescription.Medicines = prescription.Medicines;
+        existingPrescription.Medicines = prescription.Medicines;// I'm not sure of this
 
         try
         {
