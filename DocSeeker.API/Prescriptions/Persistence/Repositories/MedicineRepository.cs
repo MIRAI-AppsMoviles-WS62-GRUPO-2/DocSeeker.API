@@ -28,6 +28,11 @@ public class MedicineRepository: BaseRepository, IMedicineRepository
             .ToListAsync();
     }
 
+    public async Task<Medicine> FindByIdAsync(int medicineId)
+    {
+        return await _context.Medicines.FindAsync(medicineId);
+    }
+
     public async Task AddAsync(Medicine medicine)
     {
         await _context.Medicines.AddAsync(medicine);

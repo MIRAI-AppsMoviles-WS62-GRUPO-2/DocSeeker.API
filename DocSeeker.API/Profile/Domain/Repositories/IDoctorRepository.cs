@@ -1,6 +1,6 @@
-﻿using DocSeeker.API.Prescriptions.Domain.Models;
+﻿using DocSeeker.API.Profile.Domain.Models;
 
-namespace DocSeeker.API.Prescriptions.Domain.Repositories;
+namespace DocSeeker.API.Profile.Domain.Repositories;
 
 public interface IDoctorRepository
 {

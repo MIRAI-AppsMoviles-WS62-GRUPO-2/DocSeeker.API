@@ -1,4 +1,6 @@
-﻿namespace DocSeeker.API.Prescriptions.Domain.Models;
+﻿using DocSeeker.API.Prescriptions.Domain.Models;
+
+namespace DocSeeker.API.Profile.Domain.Models;
 
 public class Doctor
 {

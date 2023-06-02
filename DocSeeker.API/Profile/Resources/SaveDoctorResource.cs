@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DocSeeker.API.Prescriptions.Resources;
+namespace DocSeeker.API.Profile.Resources;
 
 // With this file we are using DTO(Data Transfer Object) pattern. This is a DTO.
 public class SaveDoctorResource

@@ -1,4 +1,5 @@
-﻿using DocSeeker.API.Prescriptions.Domain.Models;
+﻿using DocSeeker.API.Profile.Domain.Models;
+using DocSeeker.API.Prescriptions.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -59,10 +60,12 @@ public class AppDbContext: DbContext
 
         // Relationships
 
-        builder.Entity<Doctor>()
+        // I don't know how configure one-to-many relationship with different bounded context
+        
+        /*builder.Entity<Doctor>()
             .HasMany(d => d.Prescriptions)
             .WithOne(p => p.Doctor)
-            .HasForeignKey(p => p.DoctorId);
+            .HasForeignKey(p => p.DoctorId);*/
 
         builder.Entity<Prescription>()
             .HasMany(p => p.Medicines)
