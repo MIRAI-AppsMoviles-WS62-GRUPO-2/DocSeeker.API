@@ -6,6 +6,7 @@ public interface IPrescriptionRepository
 {
     Task<IEnumerable<Prescription>> ListAsync();
     Task<IEnumerable<Prescription>> FindByDoctorIdAsync(int doctorId);
+    Task<Prescription> FindByIdAsync(int prescriptionId);
     Task AddAsync(Prescription prescription);
     void Update(Prescription prescription);
     void Remove(Prescription prescription);

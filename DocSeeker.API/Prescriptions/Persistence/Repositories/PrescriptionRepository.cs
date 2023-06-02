@@ -16,6 +16,8 @@ public class PrescriptionRepository: BaseRepository, IPrescriptionRepository
 
     public async Task<IEnumerable<Prescription>> ListAsync()
     {
+        // We can use .Include() to get information of an object related
+        // with out current object
         return await _context.Prescriptions.ToListAsync();
     }
 
@@ -24,6 +26,11 @@ public class PrescriptionRepository: BaseRepository, IPrescriptionRepository
         return await _context.Prescriptions
             .Where(p => p.DoctorId == doctorId)
             .ToListAsync();
+    }
+
+    public async Task<Prescription> FindByIdAsync(int prescriptionId)
+    {
+        return await _context.Prescriptions.FindAsync(prescriptionId);
     }
 
     public async Task AddAsync(Prescription prescription)

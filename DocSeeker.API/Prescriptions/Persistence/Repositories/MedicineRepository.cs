@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DocSeeker.API.Prescriptions.Persistence.Repositories;
 
+// Rider helps us create the functions, but we have to specify which functions
+// are async.
 public class MedicineRepository: BaseRepository, IMedicineRepository
 {
     public MedicineRepository(AppDbContext context) : base(context)
