@@ -28,6 +28,6 @@ public class SaveMedicineResource
     [MaxLength(300)]
     public string SpecialInstructions { get; set; }
     
-    
+    [Required]
     public int PrescriptionId { get; set; }
 }

@@ -18,6 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Appointment\" />
+      <Folder Include="News\" />
       <Folder Include="Profile\Interfaces\Internal\" />
       <Folder Include="Profile\Interfaces\Rest\" />
       <Folder Include="Profile\Persistence\Repositories\" />

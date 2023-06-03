@@ -12,5 +12,6 @@ public class SavePrescriptionResource
     [MaxLength(500)]
     public string Recommendation { get; set; }
     
+    [Required]
     public int DoctorId { get; set; }
 }
