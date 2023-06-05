@@ -2,6 +2,10 @@
 
 public class Prescription
 {
+    public Prescription()
+    {
+    }
+
     public Prescription(List<Medicine> medicines)
     {
         Medicines = medicines;

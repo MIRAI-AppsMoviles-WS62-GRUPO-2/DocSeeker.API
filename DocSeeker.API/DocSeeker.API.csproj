@@ -10,8 +10,8 @@
         <PackageReference Include="AutoMapper" Version="12.0.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.4.23259.3" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.0-preview.4.23259.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
         <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
@@ -20,10 +20,9 @@
     <ItemGroup>
       <Folder Include="Appointment\" />
       <Folder Include="News\" />
-      <Folder Include="Profile\Interfaces\Internal\" />
-      <Folder Include="Profile\Interfaces\Rest\" />
-      <Folder Include="Profile\Persistence\Repositories\" />
-      <Folder Include="Profile\Services\" />
+      <Folder Include="Profiles\Interfaces\" />
+      <Folder Include="Profiles\Persistence\" />
+      <Folder Include="Profiles\Services\" />
     </ItemGroup>
 
 </Project>

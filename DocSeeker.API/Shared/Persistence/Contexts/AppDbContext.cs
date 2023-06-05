@@ -1,4 +1,4 @@
-﻿using DocSeeker.API.Profile.Domain.Models;
+﻿using DocSeeker.API.Profiles.Domain.Models;
 using DocSeeker.API.Prescriptions.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +17,7 @@ public class AppDbContext: DbContext
     // configuration that we are setting. Later, in another file we call this properties
     public DbSet<Prescription> Prescriptions { get; set; }
     public DbSet<Medicine> Medicines { get; set; }
-    public DbSet<Doctor> Doctors { get; set; }
+    //public DbSet<Doctor> Doctors { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
