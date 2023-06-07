@@ -3,7 +3,7 @@ using DocSeeker.API.Shared.Persistence.Contexts;
 
 namespace DocSeeker.API.Shared.Persistence.Repositories;
 
-public class UnitOfWork: IUnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
     // AppDbContext is a class created by us
     private readonly AppDbContext _context;

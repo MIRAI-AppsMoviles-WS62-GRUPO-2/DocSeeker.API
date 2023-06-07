@@ -13,7 +13,6 @@ public static class StringExtensions
             yield return char.ToLower(e.Current);
 
             while (e.MoveNext())
-            {
                 if (char.IsUpper(e.Current))
                 {
                     yield return '_';
@@ -23,9 +22,8 @@ public static class StringExtensions
                 {
                     yield return e.Current;
                 }
-            }
         }
-        
+
         return new string(Convert(text.GetEnumerator()).ToArray());
     }
 }
