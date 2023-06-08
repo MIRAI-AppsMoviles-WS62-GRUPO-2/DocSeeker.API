@@ -1,10 +1,10 @@
-﻿using Docseeker.API.Profiles.Domain.Models;
-using Docseeker.API.Profiles.Domain.Repositories;
+﻿using DocSeeker.API.Profiles.Domain.Models;
+using DocSeeker.API.Profiles.Domain.Repositories;
 using DocSeeker.API.Shared.Persistence.Contexts;
 using DocSeeker.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Docseeker.API.Profiles.Persistence.Repositories;
+namespace DocSeeker.API.Profiles.Persistence.Repositories;
 
 public class DoctorRepository : BaseRepository, IDoctorRepository
 {

@@ -1,6 +1,7 @@
-﻿using Docseeker.API.MedicalAppointment.Domain.Models;
+﻿using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Domain.Services.Communication;
 
-namespace Docseeker.API.MedicalAppointment.Domain.Services;
+namespace DocSeeker.API.MedicalAppointment.Domain.Services;
 
 public interface IAppointmentService
 {

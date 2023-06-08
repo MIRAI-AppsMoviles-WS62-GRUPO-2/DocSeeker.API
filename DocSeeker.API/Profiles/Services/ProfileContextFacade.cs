@@ -1,6 +1,6 @@
-﻿using DocseekerAPI.Profiles.Interfaces.Internal;
+﻿using DocSeeker.API.Profiles.Interfaces.Internal;
 
-namespace Docseeker.API.Profiles.Services;
+namespace DocSeeker.API.Profiles.Services;
 
 public class ProfileContextFacade : IProfileContextFacade
 {

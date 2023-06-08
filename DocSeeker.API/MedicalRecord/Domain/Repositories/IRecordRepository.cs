@@ -1,6 +1,6 @@
-﻿using Docseeker.API.MedicalRecord.Domain.Models;
+﻿using DocSeeker.API.MedicalRecord.Domain.Models;
 
-namespace Docseeker.API.MedicalRecord.Domain.Repositories;
+namespace DocSeeker.API.MedicalRecord.Domain.Repositories;
 
 public interface IRecordRepository
 {

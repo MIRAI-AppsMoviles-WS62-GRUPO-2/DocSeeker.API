@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Docseeker.API.Profiles.Domain.Models;
-using Docseeker.API.Profiles.Resources;
+using DocSeeker.API.Profiles.Domain.Models;
+using DocSeeker.API.Profiles.Resources;
 
-namespace Docseeker.API.Profiles.Mapping;
+namespace DocSeeker.API.Profiles.Mapping;
 
 public class ModelToResourceProfile : Profile // This is the mapping from Model to Resource
 {

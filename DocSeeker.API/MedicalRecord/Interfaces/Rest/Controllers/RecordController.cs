@@ -1,8 +1,8 @@
 ﻿using System.Net.Mime;
 using AutoMapper;
-using Docseeker.API.MedicalRecord.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Services;
-using Docseeker.API.MedicalRecord.Resources;
+using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.MedicalRecord.Domain.Services;
+using DocSeeker.API.MedicalRecord.Resources;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 

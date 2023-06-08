@@ -1,8 +1,8 @@
-﻿using Docseeker.API.Profiles.Domain.Models;
-using Docseeker.API.Profiles.Domain.Services.Communication;
+﻿using DocSeeker.API.Profiles.Domain.Models;
+using DocSeeker.API.Profiles.Domain.Services.Communication;
 
 
-namespace Docseeker.API.Profiles.Domain.Services;
+namespace DocSeeker.API.Profiles.Domain.Services;
 
 public interface IDoctorService
 {

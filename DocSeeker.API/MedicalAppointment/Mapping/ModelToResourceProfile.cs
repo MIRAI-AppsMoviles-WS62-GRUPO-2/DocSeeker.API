@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalAppointment.Resources;
+using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Resources;
 
-namespace Docseeker.API.MedicalAppointment.Mapping;
+namespace DocSeeker.API.MedicalAppointment.Mapping;
 
 public class ModelToResourceProfile : Profile
 {

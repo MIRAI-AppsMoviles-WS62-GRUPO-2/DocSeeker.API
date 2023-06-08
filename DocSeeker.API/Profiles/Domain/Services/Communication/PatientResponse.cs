@@ -1,7 +1,7 @@
-﻿using Docseeker.API.Profiles.Domain.Models;
+﻿using DocSeeker.API.Profiles.Domain.Models;
 using DocSeeker.API.Shared.Domain.Services.Communication;
 
-namespace Docseeker.API.Profiles.Domain.Services.Communication;
+namespace DocSeeker.API.Profiles.Domain.Services.Communication;
 
 public class PatientResponse : BaseResponse<Patient>
 {

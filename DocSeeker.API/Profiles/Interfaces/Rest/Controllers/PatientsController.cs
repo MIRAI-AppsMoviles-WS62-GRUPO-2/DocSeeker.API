@@ -1,12 +1,12 @@
 ﻿using System.Net.Mime;
 using AutoMapper;
-using Docseeker.API.Profiles.Domain.Models;
-using Docseeker.API.Profiles.Domain.Services;
-using Docseeker.API.Profiles.Resources;
+using DocSeeker.API.Profiles.Domain.Models;
+using DocSeeker.API.Profiles.Domain.Services;
+using DocSeeker.API.Profiles.Resources;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Docseeker.API.Profiles.Interfaces.Rest.Controllers;
+namespace DocSeeker.API.Profiles.Interfaces.Rest.Controllers;
 
 [ApiController]
 [Route("api/v1/[controller]")]

@@ -1,9 +1,10 @@
-﻿using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalAppointment.Domain.Repositories;
-using Docseeker.API.MedicalAppointment.Domain.Services;
+﻿using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Domain.Repositories;
+using DocSeeker.API.MedicalAppointment.Domain.Services;
+using DocSeeker.API.MedicalAppointment.Domain.Services.Communication;
 using DocSeeker.API.Shared.Domain.Repositories;
 
-namespace Docseeker.API.MedicalAppointment.Services;
+namespace DocSeeker.API.MedicalAppointment.Services;
 
 public class AppointmentService : IAppointmentService
 {

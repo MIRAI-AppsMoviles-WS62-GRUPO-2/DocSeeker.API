@@ -1,4 +1,4 @@
-﻿namespace Docseeker.API.Profiles.Resources;
+﻿namespace DocSeeker.API.Profiles.Resources;
 
 public class PatientResource
 {

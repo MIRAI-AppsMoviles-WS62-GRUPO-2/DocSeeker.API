@@ -1,10 +1,10 @@
-﻿using Docseeker.API.Profiles.Domain.Models;
-using Docseeker.API.Profiles.Domain.Repositories;
-using Docseeker.API.Profiles.Domain.Services;
-using Docseeker.API.Profiles.Domain.Services.Communication;
+﻿using DocSeeker.API.Profiles.Domain.Models;
+using DocSeeker.API.Profiles.Domain.Repositories;
+using DocSeeker.API.Profiles.Domain.Services;
+using DocSeeker.API.Profiles.Domain.Services.Communication;
 using DocSeeker.API.Shared.Domain.Repositories;
 
-namespace Docseeker.API.Profiles.Services;
+namespace DocSeeker.API.Profiles.Services;
 
 public class DoctorService : IDoctorService
 {

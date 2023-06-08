@@ -1,15 +1,15 @@
-using Docseeker.API.MedicalAppointment.Domain.Repositories;
-using Docseeker.API.MedicalAppointment.Domain.Services;
-using Docseeker.API.MedicalAppointment.Persistence.Repositories;
-using Docseeker.API.MedicalAppointment.Services;
-using Docseeker.API.MedicalRecord.Domain.Repositories;
-using Docseeker.API.MedicalRecord.Domain.Services;
+using DocSeeker.API.MedicalAppointment.Domain.Repositories;
+using DocSeeker.API.MedicalAppointment.Domain.Services;
+using DocSeeker.API.MedicalAppointment.Persistence.Repositories;
+using DocSeeker.API.MedicalAppointment.Services;
+using DocSeeker.API.MedicalRecord.Domain.Repositories;
+using DocSeeker.API.MedicalRecord.Domain.Services;
 using DocSeeker.API.MedicalRecord.Persistence.Repositories;
 using DocSeeker.API.MedicalRecord.Services;
-using Docseeker.API.Profiles.Domain.Repositories;
-using Docseeker.API.Profiles.Domain.Services;
-using Docseeker.API.Profiles.Persistence.Repositories;
-using Docseeker.API.Profiles.Services;
+using DocSeeker.API.Profiles.Domain.Repositories;
+using DocSeeker.API.Profiles.Domain.Services;
+using DocSeeker.API.Profiles.Persistence.Repositories;
+using DocSeeker.API.Profiles.Services;
 using DocSeeker.API.Prescriptions.Domain.Repositories;
 using DocSeeker.API.Prescriptions.Domain.Services;
 using DocSeeker.API.Prescriptions.Persistence.Repositories;
@@ -64,12 +64,12 @@ builder.Services.AddScoped<IMedicineService, MedicineService>();
 // Automapper Configuration
 
 builder.Services.AddAutoMapper(
-    typeof(Docseeker.API.Profiles.Mapping.ModelToResourceProfile),
-    typeof(Docseeker.API.Profiles.Mapping.ResourceToModelProfile),
+    typeof(DocSeeker.API.Profiles.Mapping.ModelToResourceProfile),
+    typeof(DocSeeker.API.Profiles.Mapping.ResourceToModelProfile),
     typeof(DocSeeker.API.Prescriptions.Mapping.ModelToResourceProfile),
     typeof(DocSeeker.API.Prescriptions.Mapping.ResourceToModelProfile),
-    typeof(Docseeker.API.MedicalAppointment.Mapping.ModelToResourceProfile),
-    typeof(Docseeker.API.MedicalAppointment.Mapping.ResourceToModelProfile),
+    typeof(DocSeeker.API.MedicalAppointment.Mapping.ModelToResourceProfile),
+    typeof(DocSeeker.API.MedicalAppointment.Mapping.ResourceToModelProfile),
     typeof(DocSeeker.API.MedicalRecord.Mapping.ModelToResourceProfile),
     typeof(DocSeeker.API.MedicalRecord.Mapping.ResourceToModelProfile));
 // Application Build

@@ -1,7 +1,7 @@
-﻿using Docseeker.API.MedicalRecord.Domain.Models;
+﻿using DocSeeker.API.MedicalRecord.Domain.Models;
 using DocSeeker.API.Shared.Domain.Services.Communication;
 
-namespace Docseeker.API.MedicalRecord.Domain.Services.Communication;
+namespace DocSeeker.API.MedicalRecord.Domain.Services.Communication;
 
 public class RecordResponse : BaseResponse<Record>
 {

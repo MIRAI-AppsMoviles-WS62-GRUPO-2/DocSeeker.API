@@ -1,7 +1,7 @@
 ﻿using DocSeeker.API.Prescriptions.Domain.Models;
-using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Models;
-using Docseeker.API.Profiles.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.Profiles.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,18 +18,13 @@ public class AppDbContext: DbContext
     // We don't use this properties in this file but this properties save all
     // configuration that we are setting. Later, in another file we call this properties
 
-
     public DbSet<Patient> Patients { get; set; }
     public DbSet<Doctor> Doctors { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
     public DbSet<Prescription> Prescriptions { get; set; }
     public DbSet<Medicine> Medicines { get; set; }
-    
     public DbSet<Record> Records { get; set; }
-
-
-
-
+    
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

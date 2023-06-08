@@ -1,7 +1,7 @@
-﻿using Docseeker.API.MedicalRecord.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Services.Communication;
+﻿using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.MedicalRecord.Domain.Services.Communication;
 
-namespace Docseeker.API.MedicalRecord.Domain.Services;
+namespace DocSeeker.API.MedicalRecord.Domain.Services;
 
 public interface IRecordService
 {

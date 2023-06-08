@@ -1,12 +1,12 @@
 ﻿using System.Net.Mime;
 using AutoMapper;
-using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalAppointment.Domain.Services;
-using Docseeker.API.MedicalAppointment.Resources;
+using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Domain.Services;
+using DocSeeker.API.MedicalAppointment.Resources;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Docseeker.API.MedicalAppointment.Interfaces.Rest.Controllers;
+namespace DocSeeker.API.MedicalAppointment.Interfaces.Rest.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]

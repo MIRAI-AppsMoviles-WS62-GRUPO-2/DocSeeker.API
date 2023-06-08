@@ -1,4 +1,4 @@
-﻿namespace Docseeker.API.MedicalAppointment.Domain.Models;
+﻿namespace DocSeeker.API.MedicalAppointment.Domain.Models;
 
 public class Appointment
 {

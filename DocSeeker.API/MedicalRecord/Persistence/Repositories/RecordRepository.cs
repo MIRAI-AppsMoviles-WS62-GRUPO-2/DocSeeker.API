@@ -1,6 +1,5 @@
-﻿
-using Docseeker.API.MedicalRecord.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Repositories;
+﻿using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.MedicalRecord.Domain.Repositories;
 using DocSeeker.API.Shared.Persistence.Contexts;
 using DocSeeker.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;

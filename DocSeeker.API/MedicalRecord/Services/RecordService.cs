@@ -1,7 +1,7 @@
-﻿using Docseeker.API.MedicalRecord.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Repositories;
-using Docseeker.API.MedicalRecord.Domain.Services;
-using Docseeker.API.MedicalRecord.Domain.Services.Communication;
+﻿using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.MedicalRecord.Domain.Repositories;
+using DocSeeker.API.MedicalRecord.Domain.Services;
+using DocSeeker.API.MedicalRecord.Domain.Services.Communication;
 using DocSeeker.API.Shared.Domain.Repositories;
 
 namespace DocSeeker.API.MedicalRecord.Services;

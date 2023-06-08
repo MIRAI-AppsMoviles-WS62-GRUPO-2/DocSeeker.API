@@ -1,10 +1,10 @@
-﻿using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalAppointment.Domain.Repositories;
+﻿using DocSeeker.API.MedicalAppointment.Domain.Models;
+using DocSeeker.API.MedicalAppointment.Domain.Repositories;
 using DocSeeker.API.Shared.Persistence.Contexts;
 using DocSeeker.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Docseeker.API.MedicalAppointment.Persistence.Repositories;
+namespace DocSeeker.API.MedicalAppointment.Persistence.Repositories;
 
 public class AppointmentRepository : BaseRepository, IAppointmentRepository
 {

@@ -1,4 +1,4 @@
-﻿namespace Docseeker.API.MedicalRecord.Resources;
+﻿namespace DocSeeker.API.MedicalRecord.Resources;
 
 public class RecordResource
 {

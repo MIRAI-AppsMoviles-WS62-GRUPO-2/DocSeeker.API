@@ -1,4 +1,4 @@
-﻿namespace DocseekerAPI.Profiles.Interfaces.Internal;
+﻿namespace DocSeeker.API.Profiles.Interfaces.Internal;
 
 public interface IProfileContextFacade
 {

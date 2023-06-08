@@ -1,4 +1,4 @@
-﻿namespace Docseeker.API.MedicalAppointment.Resources;
+﻿namespace DocSeeker.API.MedicalAppointment.Resources;
 
 public class AppointmentResource
 {

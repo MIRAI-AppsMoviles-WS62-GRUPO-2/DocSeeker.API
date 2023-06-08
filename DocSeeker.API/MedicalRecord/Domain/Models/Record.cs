@@ -1,4 +1,4 @@
-﻿namespace Docseeker.API.MedicalRecord.Domain.Models;
+﻿namespace DocSeeker.API.MedicalRecord.Domain.Models;
 
 public class Record
 {
