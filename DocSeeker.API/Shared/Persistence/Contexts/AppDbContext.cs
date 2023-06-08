@@ -1,5 +1,4 @@
-﻿using DocSeeker.API.Profiles.Domain.Models;
-using DocSeeker.API.Prescriptions.Domain.Models;
+﻿using DocSeeker.API.Prescriptions.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +16,6 @@ public class AppDbContext: DbContext
     // configuration that we are setting. Later, in another file we call this properties
     public DbSet<Prescription> Prescriptions { get; set; }
     public DbSet<Medicine> Medicines { get; set; }
-    //public DbSet<Doctor> Doctors { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -47,31 +45,14 @@ public class AppDbContext: DbContext
         builder.Entity<Medicine>().Property(m=>m.Duration).IsRequired().HasMaxLength(30);
         builder.Entity<Medicine>().Property(m=>m.SpecialInstructions).HasMaxLength(300);
         
-        // Doctors Configuration
-
-        builder.Entity<Doctor>().ToTable("Doctors");
-        builder.Entity<Doctor>().HasKey(d => d.Id);
-        builder.Entity<Doctor>().Property(d => d.Id).IsRequired();
-        builder.Entity<Doctor>().Property(d => d.Name).IsRequired();
-        builder.Entity<Doctor>().Property(d => d.Specialty).IsRequired();
-        builder.Entity<Doctor>().Property(d => d.Description).HasMaxLength(300);
-        builder.Entity<Doctor>().Property(d => d.Phone).IsRequired().HasMaxLength(9);
-        builder.Entity<Doctor>().Property(d => d.Email).IsRequired().HasMaxLength(40);
-
         // Relationships
-
-        // I don't know how configure one-to-many relationship with different bounded context
-        
-        /*builder.Entity<Doctor>()
-            .HasMany(d => d.Prescriptions)
-            .WithOne(p => p.Doctor)
-            .HasForeignKey(p => p.DoctorId);*/
 
         builder.Entity<Prescription>()
             .HasMany(p => p.Medicines)
             .WithOne(m => m.Prescription)
             .HasForeignKey(m => m.PrescriptionId);
-        
+
+
         // Apply Snake Case Naming Convention
 
         builder.UseSnakeCaseNamingConvention();
