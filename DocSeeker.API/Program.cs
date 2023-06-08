@@ -10,6 +10,10 @@ using Docseeker.API.Profiles.Domain.Repositories;
 using Docseeker.API.Profiles.Domain.Services;
 using Docseeker.API.Profiles.Persistence.Repositories;
 using Docseeker.API.Profiles.Services;
+using DocSeeker.API.Prescriptions.Domain.Repositories;
+using DocSeeker.API.Prescriptions.Domain.Services;
+using DocSeeker.API.Prescriptions.Persistence.Repositories;
+using DocSeeker.API.Prescriptions.Services;
 using DocSeeker.API.Shared.Domain.Repositories;
 using DocSeeker.API.Shared.Persistence.Contexts;
 using DocSeeker.API.Shared.Persistence.Repositories;
@@ -52,13 +56,18 @@ builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddScoped<IRecordRepository, RecordRepository>();
 builder.Services.AddScoped<IRecordService, RecordService>();
-
+builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
+builder.Services.AddScoped<IMedicineRepository, MedicineRepository>();
+builder.Services.AddScoped<IMedicineService, MedicineService>();
 
 // Automapper Configuration
 
 builder.Services.AddAutoMapper(
     typeof(Docseeker.API.Profiles.Mapping.ModelToResourceProfile),
     typeof(Docseeker.API.Profiles.Mapping.ResourceToModelProfile),
+    typeof(DocSeeker.API.Prescriptions.Mapping.ModelToResourceProfile),
+    typeof(DocSeeker.API.Prescriptions.Mapping.ResourceToModelProfile),
     typeof(Docseeker.API.MedicalAppointment.Mapping.ModelToResourceProfile),
     typeof(Docseeker.API.MedicalAppointment.Mapping.ResourceToModelProfile),
     typeof(DocSeeker.API.MedicalRecord.Mapping.ModelToResourceProfile),
