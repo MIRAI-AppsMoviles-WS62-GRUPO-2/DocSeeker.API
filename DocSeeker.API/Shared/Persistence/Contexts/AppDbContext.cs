@@ -1,5 +1,5 @@
-using Docseeker.API.MedicalAppointment.Domain.Models;
-using Docseeker.API.MedicalRecord.Domain.Models;
+﻿using Docseeker.API.MedicalAppointment.Domain.Models;
+
 using Docseeker.API.Profiles.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +22,7 @@ public class AppDbContext : DbContext
     public DbSet<Doctor> Doctors { get; set; }
     public DbSet<Appointment> Appointments { get; set; }
     
-    public DbSet<Record> Records { get; set; }
+   
 
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -76,13 +76,7 @@ public class AppDbContext : DbContext
         
         // Records Configuration
         
-        builder.Entity<Record>().ToTable("Records");
-        builder.Entity<Record>().HasKey(r => r.Id);
-        builder.Entity<Record>().Property(r => r.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Record>().Property(r => r.Height).IsRequired();
-        builder.Entity<Record>().Property(r => r.Weight).IsRequired();
-        builder.Entity<Record>().Property(r => r.BodyMass).IsRequired();
-        builder.Entity<Record>().Property(r => r.PatientId).IsRequired();
+        
 
         // Relationships
 
