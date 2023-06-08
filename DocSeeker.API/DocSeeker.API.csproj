@@ -9,19 +9,44 @@
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="12.0.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.5" />
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.4.23259.3" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.0-preview.4.23259.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.30.1" />
         <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
+<<<<<<< HEAD
       <Folder Include="Prescriptions\Interfaces\Internal\" />
       <Folder Include="Prescriptions\Interfaces\Rest\" />
       <Folder Include="Prescriptions\Persistence\Repositories\" />
       <Folder Include="Prescriptions\Services\" />
+=======
+        <Folder Include="MedicalAppointment\Interfaces\Internal\" />
+        <Folder Include="MedicalRecord\Interfaces\Internal\" />
+        <Folder Include="Security\Authorization\" />
+        <Folder Include="Security\Domain\" />
+        <Folder Include="Security\Exceptions\" />
+        <Folder Include="Security\Interfaces\" />
+        <Folder Include="Security\Mapping\" />
+>>>>>>> feature/appointments
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.30.1" />
+        <Folder Include="MedicalAppointment\Interfaces\Internal\" />
+        <Folder Include="MedicalRecord\Interfaces\Internal\" />
+        <Folder Include="Security\Authorization\" />
+        <Folder Include="Security\Domain\" />
+        <Folder Include="Security\Exceptions\" />
+        <Folder Include="Security\Interfaces\" />
+        <Folder Include="Security\Mapping\" />
     </ItemGroup>
 
 </Project>
