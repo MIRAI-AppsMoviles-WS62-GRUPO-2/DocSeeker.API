@@ -5,26 +5,27 @@ using DocSeeker.API.Prescriptions.Domain.Services;
 using DocSeeker.API.Prescriptions.Resources;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace DocSeeker.API.Prescriptions.Interfaces.Rest.Controllers;
 
 [ApiController]
 [Route("api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
+[SwaggerTag("Create, read, update and delete Medicines")]
 public class MedicinesController: ControllerBase
 {
     private readonly IMedicineService _medicineService;
     private readonly IMapper _mapper;
-
 
     public MedicinesController(IMedicineService medicineService, IMapper mapper)
     {
         _medicineService = medicineService;
         _mapper = mapper;
     }
-
+    
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<MedicineResource>), 200)]
+    [ProducesResponseType(typeof(IEnumerable<MedicineResource>),200)]
     public async Task<IEnumerable<MedicineResource>> GetAllAsync()
     {
         var medicines = await _medicineService.ListAsync();

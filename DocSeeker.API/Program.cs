@@ -18,6 +18,7 @@ using DocSeeker.API.Shared.Domain.Repositories;
 using DocSeeker.API.Shared.Persistence.Contexts;
 using DocSeeker.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args); // Create a builder object 
 
@@ -26,7 +27,28 @@ var builder = WebApplication.CreateBuilder(args); // Create a builder object
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo()
+    {
+        Version = "v1",
+        Title = "ACME DocSeeker API",
+        Description = "ACME DocSeeker RESTful API",
+        TermsOfService = new Uri("https://vuesharp-aplicaciones-web-sw52-grupo-2.github.io/Landing-Page-DocSeeker/#aboutUs"),// landing page
+        Contact = new OpenApiContact
+        {
+            Name = "ACME.studio",
+            Url = new Uri("https://vuesharp-aplicaciones-web-sw52-grupo-2.github.io/Landing-Page-DocSeeker/")
+        },
+        License = new OpenApiLicense
+        {
+            Name   = "ACME DocSeeker Resources License",
+            Url = new Uri("https://vuesharp-aplicaciones-web-sw52-grupo-2.github.io/Landing-Page-DocSeeker/license")
+        }
+            
+    });
+    options.EnableAnnotations();
+});
 
 // Add Database Connection
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -88,7 +110,11 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("v1/swagger.json", "v1");
+        options.RoutePrefix = "swagger";
+    });
 }
 
 app.UseHttpsRedirection();
@@ -98,3 +124,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+//public partial class Program {}

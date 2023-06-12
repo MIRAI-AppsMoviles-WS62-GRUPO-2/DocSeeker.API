@@ -5,6 +5,7 @@ using DocSeeker.API.Prescriptions.Domain.Services;
 using DocSeeker.API.Prescriptions.Resources;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace DocSeeker.API.Prescriptions.Interfaces.Rest.Controllers;
 
@@ -14,6 +15,7 @@ namespace DocSeeker.API.Prescriptions.Interfaces.Rest.Controllers;
 [ApiController]
 [Route("api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
+[SwaggerTag("Create, read, update and delete Prescriptions")]
 public class PrescriptionsController: ControllerBase
 {
     private readonly IPrescriptionService _prescriptionService;
@@ -35,6 +37,9 @@ public class PrescriptionsController: ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(PrescriptionResource), 201)] // Created
+    [ProducesResponseType(typeof(List<string>), 400)] // BadRequest - list of error messages
+    [ProducesResponseType(500)] // InternalServerError - No response type is specified in this case.
     public async Task<IActionResult> PostAsync([FromBody] SavePrescriptionResource resource)
     {
         if (!ModelState.IsValid) // ModelState will validate all the constraints that resource has.
