@@ -1,4 +1,4 @@
-﻿namespace DocSeeker.API.Prescriptions.Interfaces.Rest.Controllers;
+﻿namespace DocSeeker.API.Security.Domain.Services.Communication;
 
 public class UpdateRequest
 {
