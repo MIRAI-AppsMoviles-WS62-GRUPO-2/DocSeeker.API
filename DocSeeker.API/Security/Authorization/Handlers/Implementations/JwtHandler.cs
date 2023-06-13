@@ -75,6 +75,8 @@ public class JwtHandler: IJwtHandler
             }, out var validatedToken);
             var jwtToken = (JwtSecurityToken) validatedToken;
             var userId = int.Parse(jwtToken.Claims.First(claim => claim.Type == ClaimTypes.Sid).Value);
+            
+            // if all are right then we return userId
             return userId;
         }
         catch (Exception e)
