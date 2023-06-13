@@ -5,6 +5,7 @@ using DocSeeker.API.Security.Domain.Services;
 namespace DocSeeker.API.Security.Authorization.Middleware;
 
 // We use Change Responsibility pattern.
+// This is the jwt handler implementation.
 public class JwtMiddleware
 {
     private readonly RequestDelegate _next;
