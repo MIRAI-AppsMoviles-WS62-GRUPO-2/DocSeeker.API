@@ -6,6 +6,10 @@ using DocSeeker.API.MedicalRecord.Domain.Repositories;
 using DocSeeker.API.MedicalRecord.Domain.Services;
 using DocSeeker.API.MedicalRecord.Persistence.Repositories;
 using DocSeeker.API.MedicalRecord.Services;
+using DocSeeker.API.News.Domain.Repositories;
+using DocSeeker.API.News.Domain.Services;
+using DocSeeker.API.News.Persistence.Repositories;
+using DocSeeker.API.News.Services;
 using DocSeeker.API.Profiles.Domain.Repositories;
 using DocSeeker.API.Profiles.Domain.Services;
 using DocSeeker.API.Profiles.Persistence.Repositories;
@@ -20,9 +24,11 @@ using DocSeeker.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
+
 var builder = WebApplication.CreateBuilder(args); // Create a builder object 
 
 // Add services to the container.
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -49,6 +55,18 @@ builder.Services.AddSwaggerGen(options =>
     });
     options.EnableAnnotations();
 });
+
+// Configuration CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 
 // Add Database Connection
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -82,6 +100,8 @@ builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
 builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();
 builder.Services.AddScoped<IMedicineRepository, MedicineRepository>();
 builder.Services.AddScoped<IMedicineService, MedicineService>();
+builder.Services.AddScoped<INewRepository, NewRepository>();
+builder.Services.AddScoped<INewService, NewService>();
 
 // Automapper Configuration
 
@@ -93,7 +113,9 @@ builder.Services.AddAutoMapper(
     typeof(DocSeeker.API.MedicalAppointment.Mapping.ModelToResourceProfile),
     typeof(DocSeeker.API.MedicalAppointment.Mapping.ResourceToModelProfile),
     typeof(DocSeeker.API.MedicalRecord.Mapping.ModelToResourceProfile),
-    typeof(DocSeeker.API.MedicalRecord.Mapping.ResourceToModelProfile));
+    typeof(DocSeeker.API.MedicalRecord.Mapping.ResourceToModelProfile),
+    typeof(DocSeeker.API.News.Mapping.ModelToResourceProfile),
+    typeof(DocSeeker.API.News.Mapping.ResourceToModelProfile));
 // Application Build
 
 var app = builder.Build();
@@ -116,7 +138,14 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = "swagger";
     });
 }
+// Configuración de CORS
+app.UseCors();
 
+// Configuración de enrutamiento y otros middleware
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -33,4 +33,7 @@ public class SavePatientResource
     [Required]
     [MaxLength(9)]
     public string Phone { get; set; }
+    
+    [Required]
+    public string Password { get; set; }
 }
