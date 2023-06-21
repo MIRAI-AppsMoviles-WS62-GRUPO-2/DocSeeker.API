@@ -1,6 +1,7 @@
 ﻿using DocSeeker.API.Prescriptions.Domain.Models;
 using DocSeeker.API.MedicalAppointment.Domain.Models;
 using DocSeeker.API.MedicalRecord.Domain.Models;
+using DocSeeker.API.News.Domain.Models;
 using DocSeeker.API.Profiles.Domain.Models;
 using DocSeeker.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,8 @@ public class AppDbContext: DbContext
     public DbSet<Medicine> Medicines { get; set; }
     public DbSet<Record> Records { get; set; }
     
+    public DbSet<New> News { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -100,6 +103,15 @@ public class AppDbContext: DbContext
         builder.Entity<Record>().Property(r => r.Height).IsRequired();
         builder.Entity<Record>().Property(r => r.BodyMass).IsRequired();
         builder.Entity<Record>().Property(r => r.PatientId).IsRequired();
+        
+        // News Configuration
+        
+        builder.Entity<New>().ToTable("News");
+        builder.Entity<New>().HasKey(n => n.Id);
+        builder.Entity<New>().Property(n => n.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<New>().Property(n => n.Title).IsRequired().HasMaxLength(50);
+        builder.Entity<New>().Property(n => n.ImageUrl).IsRequired().HasMaxLength(500);
+        builder.Entity<New>().Property(n => n.Description).IsRequired();
         
 
 
