@@ -125,6 +125,6 @@ public class AppDbContext: DbContext
 
         // Apply Snake Case Naming Convention
 
-        builder.UseSnakeCaseNamingConvention();
+        //builder.UseSnakeCaseNamingConvention();
     }
 }
