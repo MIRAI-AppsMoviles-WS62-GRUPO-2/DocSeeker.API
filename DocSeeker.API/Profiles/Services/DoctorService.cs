@@ -45,7 +45,14 @@ public class DoctorService : IDoctorService
             return new DoctorResponse("Doctor not found.");
         
         existingDoctor.Name = doctor.Name;
-        
+        existingDoctor.Lastname = doctor.Lastname;
+        existingDoctor.Email = doctor.Email;
+        existingDoctor.Phone = doctor.Phone;
+        existingDoctor.Gender = doctor.Gender;
+        existingDoctor.Middlename = doctor.Middlename;
+        existingDoctor.Username = doctor.Username;
+        existingDoctor.Speciality = doctor.Speciality;
+
         try
         {
             _doctorRepository.Update(existingDoctor);
