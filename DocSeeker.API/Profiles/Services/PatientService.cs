@@ -46,6 +46,15 @@ public class PatientService : IPatientService
             return new PatientResponse("Patient not found.");
 
         existingPatient.Name = patient.Name;
+        existingPatient.Lastname = patient.Lastname;
+        existingPatient.Birthdate = patient.Birthdate;
+        existingPatient.Email = patient.Email;
+        existingPatient.Phone = patient.Phone;
+        existingPatient.Gender = patient.Gender;
+        existingPatient.Middlename = patient.Middlename;
+        existingPatient.Username = patient.Username;
+        existingPatient.Password = patient.Password;
+
 
         try
         {

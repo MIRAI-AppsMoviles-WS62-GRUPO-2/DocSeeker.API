@@ -45,6 +45,8 @@ public class NewService : INewService
             return new NewResponse("New not found.");
         
         existingNew.Title = news.Title;
+        existingNew.Description = news.Description;
+        existingNew.ImageUrl = news.ImageUrl;
         
         try
         {

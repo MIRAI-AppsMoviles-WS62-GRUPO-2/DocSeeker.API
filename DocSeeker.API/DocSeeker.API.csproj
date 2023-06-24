@@ -22,8 +22,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="News\Interfaces\Internal\" />
+      <Folder Include="News\Interfaces\Internal\" />
     </ItemGroup>
+    
 
 </Project>
 

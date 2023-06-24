@@ -45,6 +45,8 @@ public class RecordService : IRecordService
             return new RecordResponse("Record not found");
 
         existingRecord.BodyMass = record.BodyMass;
+        existingRecord.Height = record.Height;
+        existingRecord.Weight = record.Weight;
 
         try
         {
